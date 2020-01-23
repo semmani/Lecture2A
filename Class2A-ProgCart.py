@@ -13,7 +13,7 @@ choice ="yes"
 while choice == "yes":
     foodItem = input("Enter a food item:")
     if foodItem in menu:
-        cart.append(foodItem)
+        cart.append(foodItem) # using built in function-append
         choice =input("Would you like to add another food item(yes/no):")
     else:
         print(">> Not Available, Please choose another item<< ")
@@ -21,7 +21,7 @@ while choice == "yes":
 print("Your Cart:",cart)
 totalPrice = 0
 for item in cart:
-    totalPrice = totalPrice + menu[item]
+    totalPrice = totalPrice + menu[item] # item is what user is asking or entering
 
 print("TotalPrice:",totalPrice)
 promoCode = input("Enter the PromoCode:")
