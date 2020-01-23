@@ -23,35 +23,45 @@ print(names[len(names)-1]) # name is Joe
 idx = names.index("Jennie") # index will be 6 because whole names are exactly string
 print(idx)
 
-num = names.count("J", 0, len(names))
-print(num)
-
+"""num = names.count("John", 0, len(names))
+print(">> num is :",num)
+"""
 
 
 #using function to count a no of word occuring in the given string
 
 quotes= """ Work hard,get Luckier
 Search the candle rather than cursing the darkness """
-#HOME WORK
+#HOME WORK---> DONE IN 5 MIN
 def count(data, word, start, end):
     c = 0
     j = 0
+    print("we r finding word--> the")
     for i in range(start,end):
-        if data[i]==word[i]:
-            i+=1
-            c+=1
+        if data[i]==word[j]:
+            if data[i+1] == word[j+1]:
+                if data[i+2] == word[j+2]:
+                    c = c+1
+
+
         else:
-            print(word[i])
+            continue
+
 
     return c
-print(">> the occurs :", count(quotes,"the",0,len(quotes))) # we are checking the no of times the occurs
+print(">> the occurs :", count(quotes,"the",0,len(quotes)),"times") # we are checking the no of times the occurs
 # in the above quotes
 
 
 
 #Using split function
-names = "John,Jennie,Jack,Joe"
-Splittednames= print(names.split())
+names = "John, Jennie, Jack, Joe"
+splittedNames = print(names.split(",")) # splitting names on the basis of ',' along with the spaces
+print(splittedNames)
+ # in order to strip spaces in the output of splittedNames---> use STRIP()
+
+for name in splittedNames:
+    print(name.strip())
 
 
 
