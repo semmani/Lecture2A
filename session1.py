@@ -13,4 +13,4 @@
      show(7)
      show(6)
 
-     # Need to check the time complexity i.e whet
+     # Need to check the time complexity i.e whether

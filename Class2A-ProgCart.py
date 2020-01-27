@@ -30,7 +30,7 @@ promoCode = input("Enter the PromoCode:")
 # hence changes into the same list can be performed instantly using extend
 
 #print("Surprsies in Cart:", cart)
- #cart.insert(1,"Soya Champ") # insert inserts the new data at any index isntantly
+#cart.insert(1,"Soya Champ") # insert inserts the new data at any index isntantly
 #print(">> More Surprise in Cart", cart)
 
 #cart.pop(2)

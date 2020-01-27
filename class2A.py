@@ -127,7 +127,7 @@ print(type(student))
 
 data = [1,2,3,4,5]
 print(data)
-print(len(data)) # it shud be length of values that datahasthat is 5
+print(len(data)) # it shud be length of values that data ha sthat is 5
 print(max(data)) # maximum data from list--->5
 print(min(data)) # minimum data from list--->1
 
