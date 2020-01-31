@@ -39,22 +39,23 @@ class Customer:
 
 
 #3. to create an object referring to the class
-cRef = Customer()
+cRef = Customer()# to create an object of class Customer
+cRef1 = Customer() # object 2
 
 print(">>cRef is:",cRef)
 print(">>cRef hashcode",hex(id(cRef)),"and type is :",type(cRef))
 # to know what is in oject--denoted as Dictionary
-print(">>cRef Dictionary",cRef.__dict__) # denotes empty dictionary
-
+print(">>cRef Dictionary",cRef.__dict__) # denotes empty dictionary-- TO KNOW WHTS THERE IN CLASS YOU PRINT _DICT_
+# ADDING DATA IN OBJECT HAVING ATTRIBUTES - DATA FORMAT
 cRef.name = "John Watson"
 cRef.phone = "89898989"
 cRef.email = "john3232@gmail.com"
 print(">>cRef Dictionary",cRef.__dict__)# now prints the output in the form of dictionary
 
-# updating
+# updating--SIMPLY ADDS INTO THE OBJECT
 cRef.phone = "5656565"
 print(">>cRef Dictionary Updated",cRef.__dict__) # easily updated
-
+# SIMPLY DELETING THE ATTRIBUTE
 del cRef.email
 print(">>cRef Dictionary",cRef.__dict__)
 del cRef

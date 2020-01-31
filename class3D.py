@@ -18,21 +18,27 @@ for word in words:
 """
 # HW:
 def split(sentence):
-  c=0
-  words = []
-  words.append(sentence)
-  for word in words:
-    print(word[0:6])
-    print(word[7:10])
-    print(word[11:18])
-    print(word[19:25])
-    print(word[])
+ start = 0
+ space_idx = sentence.find(" ") # find function finds the space in a given sentence and returns the index
+ # We can also use-- (issapce()\index())
+ while space_idx != -1:
+     print(sentence[start:space_idx])# slicing and indexing is required in these
+     start = space_idx + 1
+     space_idx = sentence.find(" ", space_idx + 1)
+ print(sentence[start::])# start :: means starting from 0 to end or :: start means reverse
 
 
- # print("No of spaces are:",c)
+split("I am in a Darkness which i can only draw away from me")
+ #split("Search the Candle, rather than cursing the darkness")
+ 
+#sentence = input("enter any sentence: ")
+#if sentence ==" ":
 
 
-split("Search the Candle, rather than cursing the darkness")
+
+ 
+ 
+ 
 
 
 

@@ -9,6 +9,11 @@ def rotation(list):
     print("Original list-->",list)
     #num =[]
     #num = list # referencing
+    shift = []
+    shift = (input("Enter how many digits you want to shift with: "))
+    print(list - shift) # error...not possible!
+    #left = [::]
+    print()
 
 
 
