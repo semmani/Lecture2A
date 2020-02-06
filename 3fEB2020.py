@@ -18,7 +18,7 @@ print(cref1.__dict__)
 print(ref2.__dict__) # adding type attribute externally , not necessarily to define it within __init__
 
 """
-#Extendibilty
+#Extendibilty--->
 class Customer:
     def __init__(self,name,phone,email):
         self.name = name
@@ -40,10 +40,10 @@ class PrimeCustomer(Customer):  # inheritance
         print("Prime Features are: Videos {} | Music {}".format(self.videos,self.music))
 
 cref1 = Customer("Johny Depp",3152226989,"johny@gmail.com")
-Customer.showCustomer(cref1)
+#Customer.showCustomer(cref1)
 
 PrimeCustomer.upgradeCust(cref1) # we extend the feature of Customer to PrimeCustomer
-print(cref1.__dict__)
+PrimeCustomer.showPrimeCustomer(cref1)
 
 
 # this is how we can add new attributes in a already defined class, we call this approach a DECORATOR I.E Design Pattern

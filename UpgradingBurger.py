@@ -5,27 +5,33 @@ class McDonalds:
         self.price = price
 
     def showMeal(self):
-        print("YOUR MEAL:\n {} \t {}".format(self.ordername,self.price))
+        print("YOUR Order:\n {} \t {}".format(self.ordername,self.price))
 
 class UpgradeMeal(McDonalds): # inheritance
 
-    def upgrade(self):
-            self.frenchFries = True
-            self.mcflurry = True
+    def upgrade(self,newItem1,newPrice):
+         self.newItem1 = newItem1
+         self.newPrice = newPrice
+
 
     def showUpgradedMeal(self):
-        self.showMeal()
-        print("\tAdded into Your Meal is: french-fries {}\tmcflurry {}".format(self.frenchFries, self.mcflurry))
+        totalNewItems = 0
+        print("\tAdded into the Order is: {}\t{}".format(self.newItems, self.newPrice))
 
 
 
-burger = McDonalds("Burger(Aloo-Tikki)","\u20b9250")
+
+burger = McDonalds("Burger(Basic)","\u20b9350")
 burger.showMeal()
-ans = input("\nDo You want to upgrade your meal?(yes/no): ")
+ans = input("\n Do You want to upgrade your meal?(yes/no): ")
 if ans == "yes":
 
+    UpgradeMeal.upgrade(burger,"french-fries","\u20b9100")# we extend the feature of Customer to PrimeCustomer
+    # to append bothfrenchfries and coketogether---> ask ishant sir
+    UpgradeMeal.upgrade(burger, "Medium Sized Coke", "\u20b9200")
+   # UpgradeMeal.upgrade(burger, "Mcflurry Chocolate Flavour", "\u20b9150")
     UpgradeMeal.showUpgradedMeal(burger)
-    print(burger.__dict__)
+
 
 
 

@@ -38,7 +38,7 @@ class Child(Parent): # reference to this will not work unless we give 3 argument
 # empty class i.e providing no init...also works
 
 #pRef = Parent("manmeet","kaur",100000)
-cRef = Child("john watson",200000) # without giving init and arguments it qill access parent class but wont work unless fields are unfilled
+cRef = Child("john watson",200000) # without giving init and arguments it will access parent class but wont work unless fields are unfilled
 #print(pRef.__dict__)
 #print(">>parent dictionary")
 #print(Parent.__dict__)

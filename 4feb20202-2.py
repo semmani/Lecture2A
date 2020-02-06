@@ -1,3 +1,19 @@
+print(cppProgram )
+
+
+#assignment
+#generate hello world prorgam for these given languages--->
+1.Dart
+2.Go # by google
+3.Kotlin
+4.Scala
+5.JavaScript and TypeScript
+
+# ALSO in all the language above implement Insertion Sort
+
+
+#Implementing Stack DATA STRUCTURE
+
 # complete it from github and try to add delete function
 
 
@@ -25,7 +41,7 @@ class LinkdList:
         print(self)# prints hashcode of self
         self.head = None
         self.current = None
-    def append(self,product):
+    def push(self,product):
         print(product)
         #LinkdList.items += 1
         #LinkdList.price += (product.quantity * product.price)
@@ -44,26 +60,6 @@ class LinkdList:
             product.nextProduct = self.head # adds circular feature
             self.head.prevProduct = self.current # inorder to iterate backward, we set previous product of head as current
 
-
-
-    def showForward(self):
-        print("Iterating forward--------->>")
-        temp = self.head
-        while temp.nextProduct != self.head:
-            temp.showProdDetails()
-            temp = temp.nextProduct
-
-        temp.showProdDetails()
-
-
-    def showBackward(self):
-        print("Iterating Backward------------------>")
-        last = self.current
-        while last.previousProduct != self.current:
-            last.showProdDetails()
-            last = last.previousProduct
-            print(last)
-        last.showProdDetails
 
 
 
@@ -91,6 +87,7 @@ class LinkdList:
         print("Products ",totalProducts) # products if given three irrespective of the quantity prints 3 only
 
 
+
 shoppingCart = LinkdList() # reference to LinkdList class--->object when made
 #product1 = Product(1001,"IphoneX","70000",2) # provided value product1,now we want to append it
 #product2 = Product(1002,"Samsung S9",55000,1)
@@ -108,16 +105,3 @@ shoppingCart.showForward()
 #print("Items In Cart:",LinkdList.totalPrice())
 #print("Price: ",LinkdList.totalItems)
 print(LinkdList.getTotalPrice(shoppingCart))
-
-
-
-# Implemementing Selection Sort in Linked List
-
-class LinkdList:
-    pass
-
-class Stack(LinkdList):
-    pass
-class Queue(LinkdList):
-    pass
-
