@@ -15,12 +15,16 @@ class Product:
 
 # implementing Stack---LIFO
 class Stack:
+    size = 0
+    items = 0
+    price = 0
 
     def __init__(self):
         print(">>Stack Created--->")
         print(self)
         self.head = None
         self.current = None
+
     def push(self,product):
         print(product)
 
@@ -32,7 +36,7 @@ class Stack:
             self.current.nextProduct = product
             self.current = product
             product.nextProduct = self.head # adds circular feature
-            self.head.previousProduct = self.current # inorder to iterate backward, we set previous product of head as current
+            self.head.previousProduct = self.current #Inorder to iterate backward, we set previous product of head as current
 
     def iterate(self):
             print("-----------STACK OF PRODUCTS--------------->")
@@ -50,31 +54,21 @@ class Stack:
         self.head.previousProduct = self.current
 
 
-"""
-    def showForward(self):
-        print("Iterating forward--------->>")
-        temp = self.head
-        while temp.nextProduct != self.head:
-            temp.showProdDetails()
-            temp = temp.nextProduct
 
-        temp.showProdDetails()
-"""
 
 cart = Stack()
-
-cart.push(Product(1001,"1.IphoneX",70000,2)) # here when object is made, value is provided, which do not make its hashcode in Main Frame
-cart.push(Product(1002,"2.Samsung S9",90000,1))
-cart.push(Product(1005,"3.Motorola g10",50000,3))
-cart.push(Product(4006,"4.Addidas Shoes",15000,1))
+cart.push(Product(1001, "1.IphoneX", 70000, 2))      #here when object is made, value is provided, which do not make its hashcode in Main Frame
+cart.push(Product(1002, "2.Samsung S9", 90000, 1))
+cart.push(Product(1005, "3.Motorola g10", 50000, 3))
+cart.push(Product(4006, "4.Addidas Shoes", 15000, 1))
 
 cart.iterate()
 print("==========================")
 
-cart.pop()
+#cart.pop()
 #cart.pop()
 
-cart.iterate()
+#cart.iterate()
 
 
 
