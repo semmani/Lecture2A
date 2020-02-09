@@ -5,3 +5,5 @@ def show():
 class CA:
     def __init__(self):
         print("CA constructed")
+
+DEF
