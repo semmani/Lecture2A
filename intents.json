@@ -1,0 +1,48 @@
+
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "response": ["Hello, thanks for visiting", "hii,how are you doing!", "Hi there, how can I help?"]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye","ok then bye", "quit"],
+         "response": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon.","Bye!, Hope i was helpful"]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "response": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "introduction",
+         "patterns": ["Who are you?", "What do you do?", "Do you have a name?"],
+         "response": ["I am a Chatbot, name is Anveg!", "Oh, i am a chatbot and i will reply to your queries", "Yes, I an Anveg-Chatbot"]
+        },
+        {
+          "tag": "cattle_disease",
+          "patterns": ["cattle diseases","cattle disease","what are cattle diseases?","tell me about cattle diseases!"],
+          "response": ["diseases with which most of the cattles suffer from and result in death, such as Bacterial;Viral;Rabies;Protozoan etc.","diseases with which most of the cattes suffer from and result in death.Such as Bacterial;Viral;Rabies;Protozoan etc.\n Two types: Contagious Diseases and Infectious Diseases "],
+          "context": ["cattle_disease"]
+        },
+        {
+          "tag": "contagious",
+          "patterns": ["contagious diseases"],
+          "response": ["As the name itself suggests, contagious diseases are those which spread by contact/nearness of the animal with animal such as respiratory disease, reproductive diseases etc"],
+          "context": ["contagious"]
+        },
+        {
+          "tag": "infectious",
+          "patterns": ["infectious diseases"],
+          "response": ["diseases which are caused due to infective agents(Virus,Bacteria or Fungus).It is said that contagious diseases are infectious but all infectious diseases are not contagious.\nTo know more about types of infectious diseases,type-> Types of Infectious Diseases "],
+          "context": ["infectious"],
+          "context_set": ["common_infectious_diseases"]
+        },
+        {
+          "tag": "common_infectious_diseases",
+          "patterns": ["common infectious diseases","types of infectious diseases","what are the various infectious diseases"],
+          "response": ["Foot and Mouth diseases\n Anthrax\n ephemeral fever\n blue tongue\n rinderpest disease \n more"],
+          "context": ["common_infectious_diseases"],
+          "context_set": ["Foot and Mouth diseases"," Anthrax"," ephemeral fever"," blue tongue","rinderpest disease"," more"]
+        }
+
+      ] }
+
+
